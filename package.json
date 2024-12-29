@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miklegonza/componentes-bit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miklegonza/componentes-bit/issues"
+  },
+  "homepage": "https://github.com/miklegonza/componentes-bit#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
