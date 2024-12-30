@@ -1,17 +1,18 @@
 {
   "name": "ecommerce-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node .",
-    "dev": "nodemon .",
+    "start": "node server",
+    "dev": "nodemon server",
+    "test": "jest",
     "sonar": "sonar-scanner"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miklegonza/componentes-bit.git"
   },
-  "author": "",
+  "author": "Michael",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/miklegonza/componentes-bit/issues"
@@ -25,7 +26,9 @@
     "mongoose": "^8.4.1"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.3",
-    "sonar-scanner": "^3.1.0"
+    "sonar-scanner": "^3.1.0",
+    "supertest": "^7.0.0"
   }
 }

@@ -102,6 +102,28 @@ const deleteCarrito = async (req, res) => {
         });
     }
 };
+const deleteCarrito2 = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const carritoExist = await carritoModel.findById(id);
+
+        if (!carritoExist) {
+            res.status(400).send({ message: 'No se encontró el carrito' });
+            return;
+        }
+        const deleted = await carritoModel.deleteOne({ _id: id });
+        if (deleted.deletedCount === 0) {
+            res.status(400).send({ message: 'No se eliminó' });
+            return;
+        }
+        res.status(200).send(deleted);
+    } catch (error) {
+        console.log('🚀 ~ deleteCarrito ~ error:', error);
+        res.status(500).send({
+            message: 'Hubo un problema al eliminar el carrito',
+        });
+    }
+};
 
 module.exports = {
     getCarritos,
